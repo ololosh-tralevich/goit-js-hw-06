@@ -22,3 +22,11 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.task-3_ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: max-content;
+  background-color: blue;
+}
