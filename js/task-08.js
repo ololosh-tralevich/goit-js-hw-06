@@ -6,20 +6,18 @@ formEl.addEventListener("submit", (event) => {
   event.preventDefault();
   const userData = {
     email: formEl.elements.email.value,
-    password: formEl.elements.password.value
+    password: formEl.elements.password.value,
   };
 
-//   console.log(userData);
-//   console.log(formEl.elements.email.value);
-//   console.log(formEl.elements.password.value);
+  if (
+    formEl.elements.email.value === "" ||
+    formEl.elements.password.value === ""
+  ) {
+    alert("Необходимо заполнить все поля!");
+    return;
+  }
 
-  // if (login.value === "" || password.value === "") {
-  //     alert("Необходимо заполнить все поля!");
-  //     return;
-  // }
+  console.log(userData);
 
-//   console.log(`Login: ${email}, Passord ${password}`);
-     console.log(userData);
-
-  // event.currentTarget.reset();
+  event.currentTarget.reset();
 });
